@@ -1,3 +1,5 @@
+![xHydra Unlock — Your phone is the key. Local only, with no cloud account or telemetry.](assets/xhydra-unlock-banner.png)
+
 # xHydra Unlock Releases
 
 This is the official public binary-release repository for **xHydra Unlock**. It is the
@@ -11,11 +13,14 @@ private product source.
 ## About xHydra Unlock
 
 xHydra Unlock is a Windows 10 and Windows 11 companion application that lets you approve
-a Windows unlock from an iPhone or Android phone over the local network.
+a Windows unlock from an iPhone or Android phone. It is local-network only by default;
+an existing pairing can optionally use a trusted private VPN when the option is enabled
+independently on both the PC and that phone.
 
 Its security model includes:
 
-- LAN-only operation with no cloud relay;
+- local-first operation with no cloud relay;
+- strict LAN-only behavior by default, with explicit two-sided private VPN opt-in;
 - no xHydra cloud account;
 - no telemetry;
 - biometric approval required for every unlock;
@@ -32,9 +37,29 @@ Its security model includes:
 
 ## Releases
 
-When a version is ready for public distribution, its official Windows binary, release
-notes, and SHA-256 checksum are published through this repository's GitHub Releases.
-Verify the published checksum before installing a downloaded binary.
+### xHydra Unlock 1.0.0
+
+- [Download the Windows MSI](https://github.com/TahaHydra/XHydra-unlock-release/releases/download/v1.0.0/xHydraUnlock-1.0.0.msi)
+- [Read the release notes](https://github.com/TahaHydra/XHydra-unlock-release/releases/tag/v1.0.0)
+- [Download the SHA-256 checksum file](https://github.com/TahaHydra/XHydra-unlock-release/releases/download/v1.0.0/xHydraUnlock-1.0.0.sha256.txt)
+
+The MSI is the complete Windows installer, so it is distributed directly rather than
+wrapped in a ZIP archive. Its published SHA-256 covers the exact MSI that users
+download:
+
+```text
+7C313356B61EE9BC24183CB0BFDD056DBC530E3F5672CBC97D464104C49B60E0  xHydraUnlock-1.0.0.msi
+```
+
+The 1.0.0 package was refreshed on 16 July 2026 before the mobile-store rollout to
+include the final Windows dashboard polish and explicit, default-off private VPN
+unlock controls. The checksum above identifies the current published package exactly.
+
+On Windows, verify a downloaded copy with:
+
+```powershell
+Get-FileHash .\xHydraUnlock-1.0.0.msi -Algorithm SHA256
+```
 
 No public binary has been added to this repository's git history. See
 [`releases/README.md`](releases/README.md) for the release-artifact policy.
