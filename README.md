@@ -44,7 +44,7 @@ Include app versions, reproduction steps, and expected versus actual behavior.
 Never attach passwords, pairing QR codes, private keys, purchase tokens, credential
 blobs, or unredacted logs. For vulnerabilities, follow [SECURITY.md](SECURITY.md).
 
-The next Windows and Android companion release is in development, including guided
+The next Windows, Android, and iPhone companion release is in development, including guided
 setup and separately authorized PC controls. These features are not part of the
 Windows 1.0.0 download below; release notes will identify when they become available.
 
