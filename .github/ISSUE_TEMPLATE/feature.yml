@@ -1,0 +1,22 @@
+name: Suggest a feature
+description: Describe a real problem or workflow you would like improved.
+title: "Feature: "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: Describe the situation and why the current experience is difficult.
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: What would help?
+      description: Include alternatives you have tried. Please keep secrets and personal information out of this public report.
+    validations:
+      required: true
+  - type: input
+    id: platforms
+    attributes:
+      label: Platforms and versions

@@ -34,6 +34,19 @@ Its security model includes:
 
 - Website: [xhydra.fr](https://xhydra.fr)
 - Product page: [xHydra Unlock](https://xhydra.fr/products/xhydra-unlock)
+- Feedback: [Report a problem or suggest a feature](https://github.com/TahaHydra/XHydra-unlock-release/issues/new/choose)
+
+## Beta feedback
+
+Android is being tested in a closed Google Play beta. Testers can use this
+repository's public issues to report real problems and suggest improvements.
+Include app versions, reproduction steps, and expected versus actual behavior.
+Never attach passwords, pairing QR codes, private keys, purchase tokens, credential
+blobs, or unredacted logs. For vulnerabilities, follow [SECURITY.md](SECURITY.md).
+
+The next Windows, Android, and iPhone companion release is in development, including guided
+setup and separately authorized PC controls. These features are not part of the
+Windows 1.0.0 download below; release notes will identify when they become available.
 
 ## Releases
 

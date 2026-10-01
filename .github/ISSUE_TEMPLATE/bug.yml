@@ -1,0 +1,45 @@
+name: Report a problem
+description: Tell us what happened so we can reproduce and fix it.
+title: "Bug: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for testing xHydra Unlock. This report is public.
+        Do not include passwords, pairing QR codes, private keys, purchase tokens, credential blobs, or unredacted logs.
+        For vulnerabilities, follow SECURITY.md instead of posting details here.
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: Windows version, companion version, phone model, mobile OS, and app version.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: What did you do, and does it happen every time?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual result
+    validations:
+      required: true
+  - type: dropdown
+    id: connection
+    attributes:
+      label: Connection
+      options:
+        - Same local Wi-Fi or Ethernet
+        - Guest Wi-Fi
+        - Private VPN
+        - Not related to the network
+        - Unsure
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Did this follow a Wi-Fi change, sleep, reboot, or upgrade? Screenshots are optional; redact personal information.
