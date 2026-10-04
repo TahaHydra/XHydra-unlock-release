@@ -2,7 +2,7 @@
 
 ## Supported versions
 
-The current public Windows release is **xHydra Unlock 1.1.0**.
+The current public Windows release is **xHydra Unlock 1.1.1**.
 
 Security fixes are expected to target the current release line. If you are running an
 older Windows companion, reproduce the issue on the latest public version when it is
@@ -55,21 +55,21 @@ responsible vulnerability reporting if you find a way to bypass them.
 Official Windows release artifacts and SHA-256 checksums are published through this
 repository's [GitHub Releases](https://github.com/TahaHydra/XHydra-unlock-release/releases).
 
-For **xHydra Unlock 1.1.0**:
+For **xHydra Unlock 1.1.1**:
 
 ```text
-C98BDF5E4F5D7DC2EB69C8E66ED458FD815C74559920889033D122F3CEC78DE1  xHydraUnlock-1.1.0.msi
+9F21EF037BCB6FEE7B4532F71B8A130F297BDAED5CCDF8661808A810E7FAA953  xHydraUnlock-1.1.1.msi
 ```
 
 Verify a downloaded installer with:
 
 ```powershell
-Get-FileHash .\xHydraUnlock-1.1.0.msi -Algorithm SHA256
+Get-FileHash .\xHydraUnlock-1.1.1.msi -Algorithm SHA256
 ```
 
 ### Authenticode status
 
-The 1.1.0 Windows release is **not signed with a publicly trusted Authenticode
+The 1.1.1 Windows release is **not signed with a publicly trusted Authenticode
 certificate**. Windows SmartScreen may therefore display an **Unknown publisher**
 warning.
 
