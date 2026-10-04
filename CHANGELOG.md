@@ -2,7 +2,26 @@
 
 ## [Unreleased]
 
-No published changes after 1.1.0 yet.
+No additional changes documented.
+
+## [1.1.1] - 2026-10-04
+
+Windows companion fixes and pairing improvements:
+
+- Fixed Windows pairing persistence consistency: a failed persistence write no longer changes the live trusted-device state.
+- Made pairing QR nonce consumption atomic, preventing concurrent reuse of one pairing nonce.
+- Added “Don't have the mobile app? Get xHydra Unlock” to the Windows pairing UI, linking to [xHydra Unlock](https://xhydra.fr/products/xhydra-unlock).
+- Bumped the Windows version to 1.1.1.
+
+This Windows release does not include Android or iOS changes.
+
+### Distribution
+
+- Windows MSI: `xHydraUnlock-1.1.1.msi`.
+- SHA-256:
+  `9F21EF037BCB6FEE7B4532F71B8A130F297BDAED5CCDF8661808A810E7FAA953`.
+- The installer is still not signed with a publicly trusted Authenticode certificate.
+  SHA-256 verifies integrity only; it is not publisher authentication.
 
 ## [1.1.0] - 2026-10-01
 
@@ -35,7 +54,7 @@ Major Windows companion and mobile-experience update.
 
 - Published Windows MSI: `xHydraUnlock-1.1.0.msi`.
 - SHA-256:
-  `C98BDF5E4F5D7DC2EB69C8E66ED458FD815C74559920889033D122F3CEC78DE1`.
+  `8A0CE4752466B618D9F49005163157B3ECD6D81D10FC9066ADEE265067BDC886`.
 - The Windows installer is currently not signed with a publicly trusted Authenticode
   certificate; Windows SmartScreen may show an Unknown publisher warning.
 

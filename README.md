@@ -12,38 +12,40 @@ private product source.
 
 ## Current release
 
-**Windows companion: xHydra Unlock 1.1.0**
+**Windows companion: xHydra Unlock 1.1.1**
 
-- [Download xHydra Unlock 1.1.0 for Windows](https://github.com/TahaHydra/XHydra-unlock-release/releases/download/v1.1.0/xHydraUnlock-1.1.0.msi)
-- [Read the 1.1.0 release notes](https://github.com/TahaHydra/XHydra-unlock-release/releases/tag/v1.1.0)
-- [Download the SHA-256 checksum](https://github.com/TahaHydra/XHydra-unlock-release/releases/download/v1.1.0/xHydraUnlock-1.1.0.sha256.txt)
+- [Download xHydra Unlock 1.1.1 for Windows](https://github.com/TahaHydra/XHydra-unlock-release/releases/download/v1.1.1/xHydraUnlock-1.1.1.msi)
+- [Read the 1.1.1 release notes](https://github.com/TahaHydra/XHydra-unlock-release/releases/tag/v1.1.1)
+- [Download the SHA-256 checksum](https://github.com/TahaHydra/XHydra-unlock-release/releases/download/v1.1.1/xHydraUnlock-1.1.1.sha256.txt)
 
 Published SHA-256:
 
 ```text
-C98BDF5E4F5D7DC2EB69C8E66ED458FD815C74559920889033D122F3CEC78DE1  xHydraUnlock-1.1.0.msi
+9F21EF037BCB6FEE7B4532F71B8A130F297BDAED5CCDF8661808A810E7FAA953  xHydraUnlock-1.1.1.msi
 ```
 
 Verify a downloaded copy in PowerShell:
 
 ```powershell
-Get-FileHash .\xHydraUnlock-1.1.0.msi -Algorithm SHA256
+Get-FileHash .\xHydraUnlock-1.1.1.msi -Algorithm SHA256
 ```
 
 The MSI is the complete Windows installer and is distributed directly rather than
 wrapped in an additional ZIP archive.
 
-> **Windows signing notice:** 1.1.0 is not currently signed with a publicly trusted
+> **Windows signing notice:** 1.1.1 is not currently signed with a publicly trusted
 > Authenticode certificate. Windows SmartScreen may therefore show an **Unknown publisher**
 > warning. Download xHydra Unlock only from the official xHydra website or this GitHub
 > release and verify the SHA-256 checksum above.
+
+SHA-256 verifies integrity only; it is not publisher authentication.
 
 ## About xHydra Unlock
 
 xHydra Unlock is a Windows 10/11 companion system that lets a paired iPhone or Android
 phone approve a Windows unlock and perform authorized PC actions.
 
-Version 1.1.0 adds:
+Version 1.1.0 introduced:
 
 - PC controls for **Lock, Sleep, Restart, and Shut down**;
 - **Wake-on-LAN** support;
@@ -52,6 +54,13 @@ Version 1.1.0 adds:
 - OS device-authentication fallback when biometrics are unavailable;
 - separate opt-in VPN permissions for unlock and PC controls; and
 - reliability and security hardening across the Windows and mobile components.
+
+Windows 1.1.1 fixes pairing persistence consistency so a failed persistence write no
+longer changes the live trusted-device state, and makes pairing QR nonce consumption
+atomic to prevent concurrent reuse. The pairing UI now includes
+“Don't have the mobile app? Get xHydra Unlock”, linking to the
+[product page](https://xhydra.fr/products/xhydra-unlock). This Windows release does not
+include Android or iOS changes.
 
 The Windows companion is public here. The Android and iPhone apps are distributed through
 their respective mobile testing/store channels rather than as binaries in this repository.
@@ -100,7 +109,13 @@ Older releases remain available from the
 [GitHub Releases page](https://github.com/TahaHydra/XHydra-unlock-release/releases).
 
 The previous Windows release was
-[xHydra Unlock 1.0.0](https://github.com/TahaHydra/XHydra-unlock-release/releases/tag/v1.0.0).
+[xHydra Unlock 1.1.0](https://github.com/TahaHydra/XHydra-unlock-release/releases/tag/v1.1.0).
+
+The currently published 1.1.0 MSI has SHA-256:
+
+```text
+8A0CE4752466B618D9F49005163157B3ECD6D81D10FC9066ADEE265067BDC886  xHydraUnlock-1.1.0.msi
+```
 
 ## Release artifact policy
 
