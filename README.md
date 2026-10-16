@@ -12,33 +12,35 @@ private product source.
 
 ## Current release
 
-**Windows companion: xHydra Unlock 1.1.1**
+**Windows companion: xHydra Unlock 1.2.0**
 
-- [Download xHydra Unlock 1.1.1 for Windows](https://github.com/TahaHydra/XHydra-unlock-release/releases/download/v1.1.1/xHydraUnlock-1.1.1.msi)
-- [Read the 1.1.1 release notes](https://github.com/TahaHydra/XHydra-unlock-release/releases/tag/v1.1.1)
-- [Download the SHA-256 checksum](https://github.com/TahaHydra/XHydra-unlock-release/releases/download/v1.1.1/xHydraUnlock-1.1.1.sha256.txt)
+- [Download xHydra Unlock 1.2.0 for Windows](https://github.com/TahaHydra/XHydra-unlock-release/releases/download/v1.2.0/xHydraUnlock-1.2.0.msi)
+- [Read the 1.2.0 release notes](https://github.com/TahaHydra/XHydra-unlock-release/releases/tag/v1.2.0)
+- [Download the SHA-256 checksum](https://github.com/TahaHydra/XHydra-unlock-release/releases/download/v1.2.0/xHydraUnlock-1.2.0.sha256.txt)
 
 Published SHA-256:
 
 ```text
-9F21EF037BCB6FEE7B4532F71B8A130F297BDAED5CCDF8661808A810E7FAA953  xHydraUnlock-1.1.1.msi
+58AE30E6FE170ABB1B5C2F23D91CC255FEE2EF090D231B9AB78A7B0C4B6D8901  xHydraUnlock-1.2.0.msi
 ```
 
 Verify a downloaded copy in PowerShell:
 
 ```powershell
-Get-FileHash .\xHydraUnlock-1.1.1.msi -Algorithm SHA256
+Get-FileHash .\xHydraUnlock-1.2.0.msi -Algorithm SHA256
+Get-AuthenticodeSignature .\xHydraUnlock-1.2.0.msi
 ```
 
 The MSI is the complete Windows installer and is distributed directly rather than
 wrapped in an additional ZIP archive.
 
-> **Windows signing notice:** 1.1.1 is not currently signed with a publicly trusted
-> Authenticode certificate. Windows SmartScreen may therefore show an **Unknown publisher**
-> warning. Download xHydra Unlock only from the official xHydra website or this GitHub
-> release and verify the SHA-256 checksum above.
+> **Signed installer:** starting with 1.2.0, the MSI and the programs it installs are
+> Authenticode-signed by **Taha Laachari** (certificate issued by Certum). The signature
+> status must be **Valid**. Because the certificate is new, Windows SmartScreen may still
+> show a warning until it has built reputation. Download xHydra Unlock only from the
+> official xHydra website or this GitHub release.
 
-SHA-256 verifies integrity only; it is not publisher authentication.
+Installed 1.1.x copies offer this update from **Settings › Software update**.
 
 ## About xHydra Unlock
 
@@ -52,10 +54,15 @@ Version 1.1.0 introduced:
 - a redesigned Windows companion;
 - improved pairing and paired-PC management;
 - OS device-authentication fallback when biometrics are unavailable;
-- separate opt-in VPN permissions for unlock and PC controls; and
+- opt-in access over a private VPN; and
 - reliability and security hardening across the Windows and mobile components.
 
-Windows 1.1.1 fixes pairing persistence consistency so a failed persistence write no
+Windows 1.2.0 signs the installer and the Windows programs, replaces the separate VPN
+permissions with one **Allow access over private VPN** setting (existing settings carry
+over), shows network warnings on Home, makes Sleep work on Modern Standby PCs, and
+starts the app right after installation without a forced restart. See the [changelog](CHANGELOG.md) for details.
+
+Windows 1.1.1 fixed pairing persistence consistency so a failed persistence write no
 longer changes the live trusted-device state, and makes pairing QR nonce consumption
 atomic to prevent concurrent reuse. The pairing UI now includes
 “Don't have the mobile app? Get xHydra Unlock”, linking to the
@@ -109,12 +116,11 @@ Older releases remain available from the
 [GitHub Releases page](https://github.com/TahaHydra/XHydra-unlock-release/releases).
 
 The previous Windows release was
-[xHydra Unlock 1.1.0](https://github.com/TahaHydra/XHydra-unlock-release/releases/tag/v1.1.0).
-
-The currently published 1.1.0 MSI has SHA-256:
+[xHydra Unlock 1.1.1](https://github.com/TahaHydra/XHydra-unlock-release/releases/tag/v1.1.1)
+(not signed). Its published MSI has SHA-256:
 
 ```text
-8A0CE4752466B618D9F49005163157B3ECD6D81D10FC9066ADEE265067BDC886  xHydraUnlock-1.1.0.msi
+9F21EF037BCB6FEE7B4532F71B8A130F297BDAED5CCDF8661808A810E7FAA953  xHydraUnlock-1.1.1.msi
 ```
 
 ## Release artifact policy

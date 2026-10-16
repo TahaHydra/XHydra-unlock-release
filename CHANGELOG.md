@@ -4,6 +4,47 @@
 
 No additional changes documented.
 
+## [1.2.0] - 2026-10-16
+
+Windows companion update.
+
+### Added
+
+- The MSI and the Windows programs it installs (service, sign-in tile, app) are now
+  **Authenticode-signed** by Taha Laachari (Certum certificate), with an RFC 3161
+  timestamp.
+- Home shows network problems above the status cards: a Public network, a Public VPN
+  adapter, or private VPN access turned on with no trusted network. **Make private…** is
+  offered once, in the warning.
+- An optional, advisory "likely company-managed" hint for the phone apps (Active Directory
+  or Microsoft Entra join, Domain network, managed policy). It contains no domain, tenant,
+  company or user identifiers.
+
+### Changed
+
+- One **Allow access over private VPN** setting replaces the separate VPN permissions for
+  unlock and PC controls. Existing settings carry over without turning off an access that
+  was on, and settings managed by your organization are respected.
+- Private VPN access recognises the private address ranges used by common VPNs, including
+  Tailscale (100.64.0.0/10). Public addresses and Public Windows networks stay blocked.
+- The installer no longer forces a restart. The app starts right after installation, and
+  starting it again shows the running window instead of a second tray icon.
+
+### Fixed
+
+- **Sleep** now works on Modern Standby PCs.
+- Paired phones learn the PC's addresses while on the local network, so they can find it
+  over a private VPN later.
+
+This Windows release does not include Android or iOS changes.
+
+### Distribution
+
+- Windows MSI: `xHydraUnlock-1.2.0.msi` (58,310,656 bytes).
+- SHA-256:
+  `58AE30E6FE170ABB1B5C2F23D91CC255FEE2EF090D231B9AB78A7B0C4B6D8901`.
+- Signed: `CN=Taha Laachari`, issued by Certum Code Signing 2021 CA.
+
 ## [1.1.1] - 2026-10-04
 
 Windows companion fixes and pairing improvements:

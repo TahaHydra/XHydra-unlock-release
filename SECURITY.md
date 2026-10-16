@@ -2,7 +2,7 @@
 
 ## Supported versions
 
-The current public Windows release is **xHydra Unlock 1.1.1**.
+The current public Windows release is **xHydra Unlock 1.2.0**.
 
 Security fixes are expected to target the current release line. If you are running an
 older Windows companion, reproduce the issue on the latest public version when it is
@@ -55,27 +55,34 @@ responsible vulnerability reporting if you find a way to bypass them.
 Official Windows release artifacts and SHA-256 checksums are published through this
 repository's [GitHub Releases](https://github.com/TahaHydra/XHydra-unlock-release/releases).
 
-For **xHydra Unlock 1.1.1**:
+For **xHydra Unlock 1.2.0**:
 
 ```text
-9F21EF037BCB6FEE7B4532F71B8A130F297BDAED5CCDF8661808A810E7FAA953  xHydraUnlock-1.1.1.msi
+58AE30E6FE170ABB1B5C2F23D91CC255FEE2EF090D231B9AB78A7B0C4B6D8901  xHydraUnlock-1.2.0.msi
 ```
 
 Verify a downloaded installer with:
 
 ```powershell
-Get-FileHash .\xHydraUnlock-1.1.1.msi -Algorithm SHA256
+Get-FileHash .\xHydraUnlock-1.2.0.msi -Algorithm SHA256
 ```
 
 ### Authenticode status
 
-The 1.1.1 Windows release is **not signed with a publicly trusted Authenticode
-certificate**. Windows SmartScreen may therefore display an **Unknown publisher**
-warning.
+Starting with 1.2.0, the Windows MSI and the xHydra Unlock programs it installs are
+**Authenticode-signed** with a code-signing certificate issued to **Taha Laachari** by
+Certum (Asseco Data Systems S.A.), with an RFC 3161 timestamp. You can check it in the
+MSI's **Properties › Digital Signatures**, or with:
 
-A SHA-256 checksum verifies that the downloaded file matches the artifact published by
-this repository; it does **not** replace the trust properties of a publicly trusted
-code-signing certificate.
+```powershell
+Get-AuthenticodeSignature .\xHydraUnlock-1.2.0.msi
+```
+
+The status must be **Valid** and the signer `CN=Taha Laachari`. Because the certificate
+is new, Windows SmartScreen may still show a warning until it has built reputation.
+
+Releases 1.1.1 and earlier were not signed; for those, the SHA-256 checksum is the only
+integrity check.
 
 Only download xHydra Unlock from the official xHydra website or this repository's
 GitHub Releases.
