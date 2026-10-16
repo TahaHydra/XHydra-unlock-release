@@ -11,15 +11,15 @@ Each published Windows release provides:
 - a SHA-256 checksum file; and
 - the matching SHA-256 value in the release documentation.
 
-The current public Windows release is **1.1.1**:
+The current public Windows release is **1.2.0**:
 
-- `xHydraUnlock-1.1.1.msi`
-- `xHydraUnlock-1.1.1.sha256.txt`
+- `xHydraUnlock-1.2.0.msi`
+- `xHydraUnlock-1.2.0.sha256.txt`
 
 Published SHA-256:
 
 ```text
-9F21EF037BCB6FEE7B4532F71B8A130F297BDAED5CCDF8661808A810E7FAA953  xHydraUnlock-1.1.1.msi
+58AE30E6FE170ABB1B5C2F23D91CC255FEE2EF090D231B9AB78A7B0C4B6D8901  xHydraUnlock-1.2.0.msi
 ```
 
 The MSI is already a complete Windows installer package and is therefore not wrapped
@@ -31,13 +31,16 @@ The checksum covers the exact MSI linked from the release. If an artifact ever n
 be replaced during release preparation, the release notes and checksum must be updated
 together so the published binary remains unambiguous.
 
-The 1.1.1 Windows artifact is currently **not signed with a publicly trusted
-Authenticode certificate**. Windows SmartScreen may therefore display an **Unknown
-publisher** warning.
+Starting with 1.2.0, the Windows MSI and the xHydra Unlock programs it installs are
+**Authenticode-signed** with a code-signing certificate issued to **Taha Laachari** by
+Certum (Asseco Data Systems S.A.), with an RFC 3161 timestamp. Windows shows the
+publisher as *Taha Laachari*. Because the certificate is new, SmartScreen may still show
+a warning until it has built reputation.
 
-SHA-256 verifies integrity only; it is not publisher authentication. The checksum
-allows users to verify that their downloaded file matches the artifact published here,
-but a checksum does not substitute for publicly trusted Authenticode signing.
+Releases 1.1.1 and earlier were not signed.
+
+The SHA-256 checksum lets users verify that their downloaded file matches the artifact
+published here. The signature additionally identifies the publisher.
 
 Only official GitHub Release attachments and links from
 [https://xhydra.fr](https://xhydra.fr) should be treated as xHydra Unlock distribution
