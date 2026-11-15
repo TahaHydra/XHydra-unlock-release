@@ -4,6 +4,45 @@
 
 No additional changes documented.
 
+## [1.3.0] - 2026-11-15
+
+Windows companion update.
+
+### Added
+
+- **Activity** page (Ctrl+4): every unlock, PC control and pairing attempt from your
+  phones, with the phone's name. A refused request shows the reason in plain words, for
+  example that the PC wasn't locked, that Windows marks the network as Public, that the
+  phone isn't allowed to restart this PC, or that the approval arrived after the PC's
+  15-second window.
+- When a setting is the cause, the entry links to it: Network, Phones, Home or Windows
+  sign-in.
+- **Copy** puts the recent activity on the clipboard, with phone names instead of
+  internal IDs, to share when asking for help.
+
+### Changed
+
+- Repeated identical attempts are grouped into one line with a count. The page covers
+  the last 14 days, up to 100 entries.
+- Refused PC controls are now recorded with the phone that asked, and each accepted
+  control is recorded once.
+
+Phones are still told only that a request wasn't accepted; the detailed reason stays on
+the PC. This Windows release does not include Android or iOS changes.
+
+## [1.2.1] - 2026-10-31
+
+Windows companion update for the Microsoft Store.
+
+### Changed
+
+- Every program file in the installer is signed, including the third-party QR code
+  library, as the Microsoft Store requires.
+- The publisher in **Settings › Apps** shows **xHydra**, with links to the website and
+  help.
+
+No functional changes.
+
 ## [1.2.0] - 2026-10-16
 
 Windows companion update.
