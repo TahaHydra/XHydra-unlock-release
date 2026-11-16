@@ -21,7 +21,7 @@ private product source.
 Published SHA-256:
 
 ```text
-96C67AC01B5EBB75ED8C905C150305789ED1ED6FE6FFF6ED79ED6215FA5C9534  xHydraUnlock-1.3.0.msi
+B465DD4C8F5F3C6E35B27555E1CF381B8B358D6D319F3AA6819A23E4951C5610  xHydraUnlock-1.3.0.msi
 ```
 
 Verify a downloaded copy in PowerShell:
@@ -59,7 +59,9 @@ Version 1.1.0 introduced:
 
 Windows 1.3.0 adds the **Activity** page: every unlock, PC control and pairing attempt
 from your phones, and when one was refused, the reason in plain words with a link to the
-setting that fixes it. Phones are still told only that a request wasn't accepted.
+setting that fixes it. Phones are still told only that a request wasn't accepted. Windows
+sign-in setup now names the exact password your account needs (Microsoft account, work or
+school, domain or Windows) and catches a Windows Hello PIN before it is checked.
 
 Windows 1.2.1 signs every program file in the installer, as the Microsoft Store
 requires, and shows the publisher as **xHydra**.

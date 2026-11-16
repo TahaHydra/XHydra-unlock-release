@@ -19,8 +19,17 @@ Windows companion update.
   sign-in.
 - **Copy** puts the recent activity on the clipboard, with phone names instead of
   internal IDs, to share when asking for help.
+- Windows sign-in setup names the exact password for your account: your Microsoft
+  account password (with its email, including a local account linked to a Microsoft
+  account), your work or school password, your domain password, or your Windows
+  password, with a link to reset that password.
 
 ### Changed
+
+- Entering something that looks like a Windows Hello PIN (only digits) asks for
+  confirmation before it is checked, because every wrong try counts toward Windows
+  locking the account; a rejection explains that a PIN can't be used and which password
+  to enter.
 
 - Repeated identical attempts are grouped into one line with a count. The page covers
   the last 14 days, up to 100 entries.

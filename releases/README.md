@@ -19,7 +19,7 @@ The current public Windows release is **1.3.0**:
 Published SHA-256:
 
 ```text
-96C67AC01B5EBB75ED8C905C150305789ED1ED6FE6FFF6ED79ED6215FA5C9534  xHydraUnlock-1.3.0.msi
+B465DD4C8F5F3C6E35B27555E1CF381B8B358D6D319F3AA6819A23E4951C5610  xHydraUnlock-1.3.0.msi
 ```
 
 The MSI is already a complete Windows installer package and is therefore not wrapped
