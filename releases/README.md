@@ -11,15 +11,15 @@ Each published Windows release provides:
 - a SHA-256 checksum file; and
 - the matching SHA-256 value in the release documentation.
 
-The current public Windows release is **1.2.0**:
+The current public Windows release is **1.3.0**:
 
-- `xHydraUnlock-1.2.0.msi`
-- `xHydraUnlock-1.2.0.sha256.txt`
+- `xHydraUnlock-1.3.0.msi`
+- `xHydraUnlock-1.3.0.sha256.txt`
 
 Published SHA-256:
 
 ```text
-58AE30E6FE170ABB1B5C2F23D91CC255FEE2EF090D231B9AB78A7B0C4B6D8901  xHydraUnlock-1.2.0.msi
+B465DD4C8F5F3C6E35B27555E1CF381B8B358D6D319F3AA6819A23E4951C5610  xHydraUnlock-1.3.0.msi
 ```
 
 The MSI is already a complete Windows installer package and is therefore not wrapped

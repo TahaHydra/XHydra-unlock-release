@@ -12,23 +12,23 @@ private product source.
 
 ## Current release
 
-**Windows companion: xHydra Unlock 1.2.0**
+**Windows companion: xHydra Unlock 1.3.0**
 
-- [Download xHydra Unlock 1.2.0 for Windows](https://github.com/TahaHydra/XHydra-unlock-release/releases/download/v1.2.0/xHydraUnlock-1.2.0.msi)
-- [Read the 1.2.0 release notes](https://github.com/TahaHydra/XHydra-unlock-release/releases/tag/v1.2.0)
-- [Download the SHA-256 checksum](https://github.com/TahaHydra/XHydra-unlock-release/releases/download/v1.2.0/xHydraUnlock-1.2.0.sha256.txt)
+- [Download xHydra Unlock 1.3.0 for Windows](https://github.com/TahaHydra/XHydra-unlock-release/releases/download/v1.3.0/xHydraUnlock-1.3.0.msi)
+- [Read the 1.3.0 release notes](https://github.com/TahaHydra/XHydra-unlock-release/releases/tag/v1.3.0)
+- [Download the SHA-256 checksum](https://github.com/TahaHydra/XHydra-unlock-release/releases/download/v1.3.0/xHydraUnlock-1.3.0.sha256.txt)
 
 Published SHA-256:
 
 ```text
-58AE30E6FE170ABB1B5C2F23D91CC255FEE2EF090D231B9AB78A7B0C4B6D8901  xHydraUnlock-1.2.0.msi
+B465DD4C8F5F3C6E35B27555E1CF381B8B358D6D319F3AA6819A23E4951C5610  xHydraUnlock-1.3.0.msi
 ```
 
 Verify a downloaded copy in PowerShell:
 
 ```powershell
-Get-FileHash .\xHydraUnlock-1.2.0.msi -Algorithm SHA256
-Get-AuthenticodeSignature .\xHydraUnlock-1.2.0.msi
+Get-FileHash .\xHydraUnlock-1.3.0.msi -Algorithm SHA256
+Get-AuthenticodeSignature .\xHydraUnlock-1.3.0.msi
 ```
 
 The MSI is the complete Windows installer and is distributed directly rather than
@@ -40,7 +40,7 @@ wrapped in an additional ZIP archive.
 > show a warning until it has built reputation. Download xHydra Unlock only from the
 > official xHydra website or this GitHub release.
 
-Installed 1.1.x copies offer this update from **Settings › Software update**.
+Installed 1.1.x and 1.2.x copies offer this update from **Settings › Software update**.
 
 ## About xHydra Unlock
 
@@ -56,6 +56,15 @@ Version 1.1.0 introduced:
 - OS device-authentication fallback when biometrics are unavailable;
 - opt-in access over a private VPN; and
 - reliability and security hardening across the Windows and mobile components.
+
+Windows 1.3.0 adds the **Activity** page: every unlock, PC control and pairing attempt
+from your phones, and when one was refused, the reason in plain words with a link to the
+setting that fixes it. Phones are still told only that a request wasn't accepted. Windows
+sign-in setup now names the exact password your account needs (Microsoft account, work or
+school, domain or Windows) and catches a Windows Hello PIN before it is checked.
+
+Windows 1.2.1 signs every program file in the installer, as the Microsoft Store
+requires, and shows the publisher as **xHydra**.
 
 Windows 1.2.0 signs the installer and the Windows programs, replaces the separate VPN
 permissions with one **Allow access over private VPN** setting (existing settings carry
@@ -116,8 +125,14 @@ Older releases remain available from the
 [GitHub Releases page](https://github.com/TahaHydra/XHydra-unlock-release/releases).
 
 The previous Windows release was
-[xHydra Unlock 1.1.1](https://github.com/TahaHydra/XHydra-unlock-release/releases/tag/v1.1.1)
-(not signed). Its published MSI has SHA-256:
+[xHydra Unlock 1.2.1](https://github.com/TahaHydra/XHydra-unlock-release/releases/tag/v1.2.1). Its published MSI has SHA-256:
+
+```text
+134542FCEE12E16DD9EA6177A27CD0DA69C6DB6668BF3E591BFAA3AA97213132  xHydraUnlock-1.2.1.msi
+```
+
+The last unsigned release was
+[xHydra Unlock 1.1.1](https://github.com/TahaHydra/XHydra-unlock-release/releases/tag/v1.1.1), SHA-256:
 
 ```text
 9F21EF037BCB6FEE7B4532F71B8A130F297BDAED5CCDF8661808A810E7FAA953  xHydraUnlock-1.1.1.msi
